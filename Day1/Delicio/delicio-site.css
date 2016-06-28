@@ -1,0 +1,120 @@
+ul a {
+	display:inline;
+	font-size:15px;
+	font-family: Verdana;
+	margin-left: 15px;
+	text-decoration: none;
+	color:black;
+}
+ul a:hover {
+	color:orange;
+}
+.chunk {
+	background: url("http://www.venetian.com/content/dam/lasvegas/venetian/master/main/home/restaurants/lavo/lavo-restaurant.jpg");
+	height: 700px;
+	width: 1500px;
+	background-size: cover;
+}
+#title {
+	margin-right: 550px;
+	color:black;
+	font-weight: bold;
+	font-size: 40px;
+	font-style: italic;
+	font-family: "Times New Roman",serif;
+}
+#word1 {
+	top:100px;
+	color:white;
+	font-family: "Times New Roman",Times, serif;
+	font-style: italic;
+	font-size:50px;
+	text-align: center;
+	padding-top: 150px;
+}
+#word2 {
+	color:white;
+	font-size:15px;
+	text-align:center;
+	margin-right: 250px;
+	margin-left: 250px;
+	font-family:"Verdana";
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
+#word3 {
+	font-family: 'Raleway', sans-serif;
+  	font-size: 20px;
+  	color:white;
+  	margin-left:660px;
+  	margin-right:660px;
+  	border: 1px solid orange;
+  	padding: 10px;
+  	text-align: center;
+  	background-color: orange;
+  	text-decoration: none;
+}
+#word3:hover {
+	color:black;
+	background-color: white;
+}
+#line {
+	margin:0 500px 30px 500px;
+}
+.bottom ul:not(.last){
+	display: inline-block;
+	list-style: none;
+	color:white;
+	padding:10px;
+	height:100px;
+	width:250px;
+	margin:0 50px 0 50px;
+}
+.bottom {
+	background-color: black;
+	height:250px;
+}
+.content div {
+/*	display:inline-block;
+*/	border-radius:35px;
+	padding: 30px;
+}
+#fb {
+	background: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRE8jISXeGHsRIBO6NUnLqcOA5VSStFynxq-7mD8jOj4V9iYbjYgsgRAlHQIw");
+	background-size: auto 100%;
+}
+#tw {
+	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUxwA2b0EvylZuXeQLFfUkwGBQzXUIJETBGN3PAoikLZphRRODY8U1gw");	
+	background-size: auto 100%;
+}
+#insta {
+	background: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS93qz1nVI1WpE4vkQtLQ-DrKHmoL1UYYZKmj4yM73R5Q-yUYylEnylwY5W");
+	background-size: auto 100%;
+}
+td img{
+	height: 30px;
+	width: 30px;
+}
+.item {
+	padding-top: 50px;
+}
+#follow div{
+	display:inline-block;
+	border-radius:35px;
+	padding: 30px;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    margin:10px 0 0 730px;
+    position: absolute;
+    background-color: grey;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown:hover {
+	color:red;
+}

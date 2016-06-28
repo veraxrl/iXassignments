@@ -1,0 +1,28 @@
+* {
+	background:#FF9100;
+}
+
+section.top {
+	padding:50px 0 90px;
+	min-height: 100%;
+}
+.top-img img {
+	height:800px;
+	width:500px;
+}
+.btn {
+	padding:10px;
+	background-color:white;
+	width:100px;
+	margin-top:10px;
+}
+.btn a {
+	text-decoration: none;
+	background: white;
+	color:#44BCC9;
+	font-size:22px;
+	font-family:"Open Sans",sans-serif;
+}
+.top-text {
+	color:white;
+}

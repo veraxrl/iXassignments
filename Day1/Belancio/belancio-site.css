@@ -1,0 +1,44 @@
+.top {
+	background:url("http://www.belancio.com/images/work/admissionado.jpg");
+	background-size:cover;
+	height:800px;
+	width:1300px;
+}
+.top p {
+	display:inline;
+	font-size:15px;
+	font-family: Helvetica;
+	margin-left: 15px;
+	text-decoration: none;
+	color:white;
+}
+#first {
+	margin-right:750px;
+	margin-left:200px;
+}
+#logo-head {
+	margin:50px 100px 50px 100px;
+	font-size:30px;
+	font-family: BrandonGrotesqueLightRegular, Helvetica, Arial, sans-serif;
+}
+#table {
+	margin:0 50px 0 50px;
+}
+.green {
+	background-color: #85dbc2;
+	color:white;
+	font-family: Helvetica;
+	height:150px;
+	width:1300px;
+}
+.green div {
+	margin:30px;
+	font-size:15px;
+	font-family: BrandonGrotesqueLightRegular, Helvetica, Arial, sans-serif;
+	display: inline-block;
+	margin: 50px 150px 0 150px;
+}
+#in-green {
+	border:1px solid white;
+	padding:10px;
+}
