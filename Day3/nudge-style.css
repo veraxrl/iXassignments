@@ -1,0 +1,82 @@
+* {
+	max-width: 1600px;
+	box-sizing: border-box;
+	font-family: 'brandon-grotesque', sans-serif;
+	text-align: center;
+}
+.top {
+	height:100px;
+	border-bottom: 1px solid #e3e3e3;
+}
+.top div{
+	float:left;
+}
+.nav ul li {
+	display: inline;
+	text-transform: uppercase;
+	margin-right: 35px;
+	font-size:15px;
+}
+.logo {
+	width:20%;
+}
+.logo img {
+	height:90px;
+	padding: 20px 0 20px 0;
+}
+.nav {
+	width:50%;
+	padding: 22px 0 22px 0;
+}
+.icon {
+	width: 30%;
+	padding: 40px 0 40px 0;
+}
+.icon a {
+	text-decoration: none;
+	color:black;
+}
+.main p {
+	font-size: 36px;
+	font-family: "freight-display-pro",sans-serif;
+	letter-spacing: 0.03em;
+	line-height: 46px;
+	width: 50%;
+	margin: 100px auto;
+}
+.pic {
+	padding: 10px 100px 10px 100px;
+	width:80%;
+	margin: 0 auto;
+}
+.pic1 {
+	width:100%;
+}
+.pic2 {
+	width:50%;
+	float:left;
+	padding-right: 20px;
+	height: 798px;
+}
+.pic3 {
+	width: 50%;
+	float:left;
+	height: 798px;
+}
+.pic4 {
+	width:60%;
+	float:left;
+	height: 395px;
+	padding:20px 20px 0 0;
+}
+.pic5 {
+	width:39%;
+	float: left;
+	height: 395px;
+	padding-top: 20px;
+}
+@media (max-width: 1200px) {
+	.pic2, .pic3, .pic4, .pic5 {
+		width: 100%
+	}
+}
