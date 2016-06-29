@@ -1,0 +1,61 @@
+* {
+	font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
+}
+.splash {
+	background-color: #425cbb;
+	height: 1000px;
+	width: 100%;
+	padding-top: 50px;
+}
+.splash h1 {
+	font-style: bold;
+	font-size:80px;
+}
+.splash h2 {
+	width: 350px;
+	margin: 40px auto;
+}
+.splash h1, h2 {
+	color:white;
+	text-align: center;
+}
+.buttons a {
+	text-decoration: none;
+	color: white;
+	border-radius:8px;
+	margin-right:15px;
+	margin-bottom: 60px;
+	padding:15px;
+	width:60px;
+}
+.screenshot {
+	text-align: center;
+	margin-top:60px;
+}
+.primary-btn {
+	background:#66FF99;
+}
+.secondary-btn {
+	background: #33CCFF;
+}
+.text {
+	height: 600px;
+	text-align: center;
+	padding-top: 50px;
+}
+.container {
+	width:600px;
+	marign:40px auto;
+}
+.container h3 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:20px;
+}
+.col {
+	margin-top: 100px;
+}
+.col ul li {
+	width:25%;
+	float:left;
+	padding:50px;
+}
