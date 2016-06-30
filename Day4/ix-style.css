@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.box {
+	border: 1px solid black;
+}
+.top {
+	background: url("http://dumsld4by7gdn.cloudfront.net/assets/backgrounds/about-main-4592d05f63d029bc507a249853a99997f10a27bcf2162fe0a78ec1ed2f233d28.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 740px;
+}
+.bg-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 740px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.3);
+}
+.logo {
+	background:url("http://dumsld4by7gdn.cloudfront.net/assets/logos/ix-white-54307ce32bd86acf403806fd8a3f5d6296e86d4d3bcb2350ca423ee947bb39b8.svg");
+	background-repeat: no-repeat;
+	background-size: 95%;
+	height: 80px;
+	margin-top: 16px;
+	margin-left: 40px;
+}
+.list ul li {
+	font: 30px "Lato",Helvetica,sans-serif;
+	line-height: 1.5;
+	color:white;
+	width: 33%;
+	float: left;
+	text-shadow: 0 1px 1px #777;
+}
+.list {
+	margin-top: 16px;
+	height: 80px;
+	padding: 20px;
+}
+.btn {
+	background-color: #F9007A;
+	border-radius: 8px;
+	color:white;
+	margin-top: 20px;
+	padding: 16px 25px;
+	line-height: 1.5;
+	font: 30px "Lato",Helvetica,sans-serif;
+}
+.line1, .line2, .line3{
+	color:white;
+	font-family:"Lato",Helvetica,sans-serif;
+}
+.line1 {
+	margin-top: 250px;
+	font-size:60px;
+}
+.line2 {
+	margin-top: 75px;
+}
+.line2, .line3 {
+	font-size:40px;
+}
+.intro {
+	height:650px;
+	background-color: #f3f6f8;
+}
+.passionate {
+	font:50px "Lato",Helvetica,sans-serif;
+}
+.intro p {
+	font:18px "Lato",Helvetica,sans-serif;
+	margin-top: 30px;
+	text-align: left;
+}
+.intro-left {
+	padding: 50px 100px 80px 100px;
+}
+.pic1 img{
+	width:180px;
+	border-radius: 100%;
+}
+.intro-left, .intro-right {
+	margin-top: 80px;
+}
