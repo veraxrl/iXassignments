@@ -75,3 +75,14 @@ function longestPalindrome(sentence) {
         return longest + " is not a palindrome";
     }
 }
+
+function areAnagrams (sentence1, sentence2) {
+    var temp1=sentence1.split("").sort().join("").trim();
+    var temp2=sentence2.split("").sort().join("").trim();
+
+    console.log(temp1);
+    console.log(temp2);   
+
+    if (temp1===temp2) return "yes";
+    else return "no";
+}

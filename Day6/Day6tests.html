@@ -61,6 +61,12 @@
         QUnit.test("longestPalindrome test 2", function( assert ) {
             assert.ok(longestPalindrome("long word racecar") === "racecar is a palindrome", "Passed!" );
         });
+        QUnit.test("areAnagrams test 1", function( assert ) {
+            assert.ok(areAnagrams("long words racecar", "racca longsworder") === "yes", "Passed!" );
+        });
+        QUnit.test("areAnagrams test 2", function( assert ) {
+            assert.ok(areAnagrams("laptop toppers", "lap whiz toppers") === "no", "Passed!" );
+        });
     </script>
 </body>
 </html>
