@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body ng-app="calculatorApp">
+	<div ng-controller="CalculatorCtrl">
+
+		<input ng-model="x">
+		<input ng-model="y">
+
+		<button ng-click="doAdd()"> Add numbers </button>
+		<p>Result is: {{result}}</p>
+		<button ng-click="multiply()">Multiply numbers</button>
+		<p>Result is: {{result2}}</p>
+
+	</div>
+	
+	<script src="./angular.js"></script>
+	<script src="./day8afternoon.js"></script>
+</body>
+</html>
