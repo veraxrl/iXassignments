@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grocery List</title>
+</head>
+<body ng-app="groceryApp">
+	<div ng-controller="groceryCtrl">
+		
+	<h1>Vera's Grocery List</h1>	
+	<p>Item Name: <input type="text" ng-model="name" ng-pattern="/^[a-zA-Z\s]*$/"></p>
+	<p>Item Quantity: <input ng-model="quantity"></p>
+	<button ng-click="addToList()">Add new item to list</button>
+	<button ng-click="emptyList()">Empty chart</button>
+
+	<p> <input ng-model="searchBar" placeholder="search your item"> </p>
+
+	<ol>
+		<li ng-repeat="one in mylist | filter:searchBar track by $index">
+			<div ng-hide="one.isEditing">
+				{{one.number}} {{one.name}} 	
+				<button ng-click="increase(one)">+</button>
+				<button ng-click="decrease(one)">-</button>
+				<button ng-click="one.isEditing=true">Edit</button>
+				<button ng-click="deleteItem(one)">Delete</button>
+			</div>
+			<div ng-show="one.isEditing">
+				<input ng-model="one.name">
+				<button ng-click="one.isEditing=false">Done</button>
+			</div>
+		</li>
+	</ol>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="./advancedGrocery.js"></script>
+</body>
+</html>
