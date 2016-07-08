@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New York Time HTTP</title>
+</head>
+<body ng-app="nytApp">
+	<div class="container" ng-controller="nytCtrl">
+	<h1>New York Times Article Search</h1>
+	<p> 
+		<input ng-model="searchBar" placeholder="search article">
+		<button ng-click="searchNYT(searchBar)">search</button>
+	</p>
+
+	<ul>
+		<li ng-repeat="a in articles track by $index">
+			<a href="{{a.web_url}}" style="text-decoration:none;color:black;font-weight:bold;">{{a.headline.main}}</a>
+			<p>{{a.snippet}}</p>
+		</li>
+	</ul>
+	</div>
+
+	<script src="./angular.js"></script>
+	<script src="./nyt.js"></script>
+</body>
+</html>
