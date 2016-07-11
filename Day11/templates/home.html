@@ -1,0 +1,10 @@
+<h3>Search for movies </h3>
+<p> 
+	<input ng-model="searchBar" placeholder="search movie">
+	<button ng-click="searchMovie(searchBar)">search</button>
+</p>
+<ul>
+	<li ng-repeat="m in movieArray track by $index">
+		<a href="#/movie/{{m.imdbID}}">{{m.Title}}</a>
+	</li>
+</ul>
