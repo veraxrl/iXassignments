@@ -28,11 +28,10 @@ app.controller('MainCtrl', function($scope, $http) {
 
 app.controller('MovieCtrl', function($scope, $http, $routeParams) {
 	$http({
-		url: "http://www.omdbapi.com/?i=" + 
-			 $routeParams.movieId +".json",
+		url: "http://www.omdbapi.com/?i=" + $routeParams.movieId,
 		method: "GET"
 	}).then(function(response) {
 		console.log(response);
-		//$scope.petition = response.data.results[0];
+		$scope.movie = response.data;
 	})
 });
