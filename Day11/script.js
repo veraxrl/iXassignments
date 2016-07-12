@@ -3,11 +3,11 @@ var app = angular.module('movieApp', ['ngRoute']);
 app.config(function($routeProvider) {
 	$routeProvider.when('/', {
 		controller: 'MainCtrl',
-		templateUrl: 'templates/home.html',
+		templateUrl: 'templates/home.html'
 	})
 	$routeProvider.when('/movie/:movieId', {
 		controller: 'MovieCtrl',
-		templateUrl: 'templates/movie.html',
+		templateUrl: 'templates/movie.html'
 	})
 });
 
@@ -33,5 +33,19 @@ app.controller('MovieCtrl', function($scope, $http, $routeParams) {
 	}).then(function(response) {
 		console.log(response);
 		$scope.movie = response.data;
+
+		$http({
+			url:"http://api.giphy.com/v1/gifs/search",
+			method:"GET",
+			params: {
+				q:$scope.movie.Title,
+				api_key:"dc6zaTOxFJmzC"
+			}
+		}).then(function(response) {
+			$scope.gifArray=response.data.data;
+			console.log($scope.gifArray);
+		})
+
+
 	})
 });
