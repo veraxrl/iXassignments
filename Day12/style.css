@@ -1,0 +1,14 @@
+.nav-bar {
+	background-color: #cc5490;
+	padding: 20px 50px;
+	font-size:30px;
+	color:white;
+	font-weight: bold;
+}
+.myList {
+	margin-top: 30px;
+}
+.me a {
+	text-decoration: none;
+	color:black;
+}
