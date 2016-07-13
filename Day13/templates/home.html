@@ -25,8 +25,8 @@
 	<ul>
 		<li ng-repeat="prop in props track by $index">
 			<div class="one-text">
-				{{prop.receiver.first_name}}
-				{{prop.text}}
+				<p>{{prop.receiver.first_name}} {{prop.text}} </p>
+				<h6>Positivity score: {{prop.positivity_score}}</h6>
 			</div>
 		</li>
 	</ul>

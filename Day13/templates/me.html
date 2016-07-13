@@ -1,21 +1,33 @@
-<h1>Me Page</h1>
+<h1></h1>
 
-<select ng-options="bru as bru.id for bru in brus" ng-model="selectedBru"></select>
+<div ng-show="msg" class="alert alert-danger row">
+	<p>{{msg}}</p>
+</div>
 
-<input ng-model="newPropsValue"></input>
-<button ng-click="sendProps()">Send</button>
-<button ng-click="loadData()">Refresh</button>
-<button class="me">
-	<a href="#/me">Me</a>
-</button>
+<div ng-class="{'isDisabled':isSending}">
+	<div class="row">
+		<select ng-options="bru as bru.id for bru in brus" ng-model="selectedBru"></select>
+	</div>
+	<div class="row">
+	<input ng-model="newPropsValue"></input>
+	</div>
+</div>
 
-<p style="color:red;">{{msg}}</p>
+<div class="row">
+	<button ng-click="sendProps()">Send</button>
+	<button ng-click="loadData()">Refresh</button>
+	<button class="me">
+		<a href="#/me">Me</a>
+	</button>
+</div>
 
 <div class="myList">
-	<ul class="main-text">
+	<ul>
 		<li ng-repeat="prop in myProps track by $index">
-			{{prop.receiver.id}}
-			{{prop.text}}
+			<div class="one-text">
+				<p>{{prop.receiver.first_name}} {{prop.text}} </p>
+				<h6>Positivity score: {{prop.positivity_score}}</h6>
+			</div>
 		</li>
 	</ul>
 </div>

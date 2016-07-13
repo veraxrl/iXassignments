@@ -22,6 +22,7 @@ app.controller('FeedCtrl', function($scope, $http) {
 				token:"d6c9dc17998de36035c962093502dc68",
 			}
 		}).then(function(response) {
+			console.log(response);
 			$scope.props=response.data;
 		})
 
@@ -41,8 +42,10 @@ app.controller('FeedCtrl', function($scope, $http) {
 
     $scope.sendProps= function () {
     	$scope.isSending=true;
-		console.log($scope.selectedBru);
-		console.log($scope.newPropsValue);
+		if (!$scope.newPropsValue) {
+			console.log("empty msg");
+			$scope.msg="Enter your message to a bru!";
+		}
 		$http({
 			url: "http://ixchommies.herokuapp.com/props",
 			method: "POST",
@@ -54,15 +57,15 @@ app.controller('FeedCtrl', function($scope, $http) {
 				"props":$scope.newPropsValue,
 			}
 		}).then(function(response) {
-			console.log(response);
-			$scope.props=response.data;
-			$scope.newPropsValue="";
+			// $scope.props=response.data;
+			// $scope.newPropsValue="";
 		}).catch(function(error) {
 			console.log(error);
 			$scope.msg=error.data.message;
 		}).finally(function() {
-			console.log("finally");
 			$scope.isSending=false;
+			$scope.newPropsValue="";
+			$scope.loadData();
 		});
 	}
 
@@ -76,7 +79,7 @@ app.controller('MeCtrl', function($scope, $http, $routeParams) {
 				token:"d6c9dc17998de36035c962093502dc68",
 			}
 	}).then(function(response) {
-			console.log(response);
+			// console.log(response);
 			$scope.myProps=response.data;
 	})
 

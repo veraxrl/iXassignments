@@ -6,8 +6,9 @@
 	font-weight: bold;
 }
 .myList {
-	margin-top: 30px;
-	font-size: 25px;
+	font-size: 20px;
+	width: 70%;
+	float:left;
 }
 .myList ul {
 	list-style: none;
@@ -25,6 +26,10 @@
 	transition: 2s;
 }
 .one-text {
-	/*border: 1px solid black;*/
-	margin: 20px 0px;
+	font-family: "Lato", Helvetica, cursive;
+	border: 10px solid pink;
+	margin: 30px 0px;
+	padding: 10px;
+	color:white;
+	background-color: #cc5490;
 }
