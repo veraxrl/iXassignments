@@ -1,0 +1,30 @@
+.nav-bar {
+	background-color: #cc5490;
+	padding: 20px 50px;
+	font-size:30px;
+	color:white;
+	font-weight: bold;
+}
+.myList {
+	margin-top: 30px;
+	font-size: 25px;
+}
+.myList ul {
+	list-style: none;
+}
+.me a {
+	text-decoration: none;
+	color:black;
+}
+.row {
+	margin:30px 0px;
+}
+.isDisabled {
+	opacity:0.3;
+	pointer-events: none;
+	transition: 2s;
+}
+.one-text {
+	/*border: 1px solid black;*/
+	margin: 20px 0px;
+}

@@ -1,0 +1,21 @@
+<h1>Me Page</h1>
+
+<select ng-options="bru as bru.id for bru in brus" ng-model="selectedBru"></select>
+
+<input ng-model="newPropsValue"></input>
+<button ng-click="sendProps()">Send</button>
+<button ng-click="loadData()">Refresh</button>
+<button class="me">
+	<a href="#/me">Me</a>
+</button>
+
+<p style="color:red;">{{msg}}</p>
+
+<div class="myList">
+	<ul class="main-text">
+		<li ng-repeat="prop in myProps track by $index">
+			{{prop.receiver.id}}
+			{{prop.text}}
+		</li>
+	</ul>
+</div>
