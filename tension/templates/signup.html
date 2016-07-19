@@ -20,6 +20,10 @@
         <button ng-click="createUser()">Sign up</button>
         <button ng-click="show()">Show</button>
       </div>
+
+      <div class="alert alert-danger row error-bar" ng-show="isError" role="alert">
+        {{errormsg}}
+      </div>
       
       
     </form>

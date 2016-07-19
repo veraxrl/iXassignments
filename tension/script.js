@@ -41,7 +41,7 @@ app.config(function($routeProvider) {
 	})
 });
 
-app.controller('listCtrl', function($scope, $http, $firebaseObject, $firebaseArray,$firebaseAuth) {
+app.controller('listCtrl', function($scope, $http, $firebaseObject, $firebaseArray,$firebaseAuth, $currentAuth) {
 	var ref = firebase.database().ref().child("msgs");
 	$scope.msgs= $firebaseArray(ref);
 
@@ -59,10 +59,19 @@ app.controller('listCtrl', function($scope, $http, $firebaseObject, $firebaseArr
   		console.log("signed out");
   	};
 
+  	$scope.getUser = function() {
+  		var firebaseUser = $scope.authObj.$getAuth();
+		if (firebaseUser) {
+		  console.log("Signed in as:", firebaseUser.uid);
+		} else {
+		  console.log("Signed out");
+		}
+  	}
+
 });
 
 app.controller('channelCtrl', function($scope, $firebaseObject, $firebaseArray, $routeParams) {
-	var ref = firebase.database().ref().child($routeParams.channelId).child("msgs");
+	var ref = firebase.database().ref().child("messages").child($routeParams.channelId);
 	$scope.msgs= $firebaseArray(ref);
 
 	$scope.addMessage = function() {
@@ -77,6 +86,8 @@ app.controller('channelCtrl', function($scope, $firebaseObject, $firebaseArray, 
 
 app.controller('signupCtrl', function($scope, $http, $firebaseObject, $firebaseArray,$routeParams,$firebaseAuth) {
 
+	$scope.isError=false;
+
 	$scope.show = function() {
 		console.log($scope.name);
 		console.log($scope.email);
@@ -90,17 +101,27 @@ app.controller('signupCtrl', function($scope, $http, $firebaseObject, $firebaseA
 			//add user for printout:
 			var ref = firebase.database().ref().child("users").child(firebaseUser.uid);
 			$scope.user= $firebaseObject(ref);
+			$scope.user.name=$scope.name;
+			$scope.user.uid= firebaseUser.uid;
+			$scope.user.email= $scope.email;
+			$scope.user.password= $scope.password;
 			$scope.user.$save().then(function(ref) {
-				ref.key == firebaseUser.uid;
+				console.log($scope.user);
+				ref.key === firebaseUser.uid;
 			}, function (error) {
+				$scope.isError= true;
 				console.log("Error:",error);
 			});
 		    console.log("User " + firebaseUser.uid + " created successfully!");
 		    console.log($scope.user);
 		    }).catch(function(error) {
 		    	console.error("Error: ", error);
+		    	$scope.isError= true;
+		    	$scope.errormsg=error.message;
 		  	})
+
 	}
+
 
 });
 
@@ -128,3 +149,20 @@ app.controller('LoginCtrl', function($scope, $routeParams, $firebaseObject, $fir
 // 		$scope.channels.general= {name: "General", description:"general"};
 // 		$scope.channels.$save();
 // });
+
+// .directive("fileread", [function () {
+//     return {
+//         scope: {
+//             fileread: "="   //two way binding
+//         },
+//         link: function (scope, element, attributes) {
+//             element.bind("change", function (changeEvent) {
+//                 scope.$apply(function () {
+//                     scope.fileread = changeEvent.target.files[0];
+//                     // or all selected files:
+//                     // scope.fileread = changeEvent.target.files;
+//                 });
+//             });
+//         }
+//     }
+// }]);
